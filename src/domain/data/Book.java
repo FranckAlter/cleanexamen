@@ -23,6 +23,13 @@ public class Book {
         this.available = true;
     }
 
+    @Override
+    public String toString() {
+        return
+                title +
+                " de " + author;
+    }
+
     public void setAvailable(boolean available) {
         this.available = available;
     }

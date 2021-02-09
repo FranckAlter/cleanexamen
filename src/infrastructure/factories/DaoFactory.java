@@ -1,18 +1,24 @@
 package infrastructure.factories;
 
+
+import domain.dao.BookDao;
+import domain.dao.BorrowDao;
+import domain.dao.PersonDao;
+import infrastructure.SQLiteDao.BookDaoSQLite;
+import infrastructure.SQLiteDao.BorrowDaoSQLite;
+import infrastructure.SQLiteDao.PersonDaoSQLite;
+
 public class DaoFactory {
-
-    public static PersonDao getPersonDao(){
-        return PersonDaoMemoryList.getInstance();
-    }
-
     public static BookDao getBookDao(){
-        return BookDaoMemoryList.getInstance();
+        return BookDaoSQLite.getInstance();
+    }
+    public static PersonDao getPersonDao(){
+        return PersonDaoSQLite.getInstance();
+    }
+    public static BorrowDao getBorrowDao(){
+        return BorrowDaoSQLite.getInstance();
     }
 
-    public static BorrowDao getBorrowDao(){
-        return BorrowDaoMemoryList.getInstance();
-    }
 
 
 }

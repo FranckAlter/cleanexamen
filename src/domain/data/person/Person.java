@@ -1,6 +1,10 @@
 package domain.data.person;
 
-public abstract class Person {
-    private int id;
+public class Person {
+    protected int id;
+
+    public int getId() {
+        return id;
+    }
 
 }
